@@ -1,0 +1,11 @@
+extends: ["spectral:oas"]
+
+rules:
+  info-contact:
+    description: "The `info` object must include a `contact` field."
+    message: "Missing `contact` in `info` object."
+    severity: error
+    given: "$.info"
+    then:
+      field: "contact"
+      function: truthy
