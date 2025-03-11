@@ -2,3 +2,35 @@ openapi: 3.0.0
 info:
   title: Sample API
   version: 1.0.0
+  description: This is a sample API specification.
+  contact:
+    name: API Support
+    email: support@example.com
+    url: dummy@gmail.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+tags:
+  - name: Example
+    description: Example endpoints
+
+paths:
+  /example:
+    get:
+      summary: Get an example response
+      description: test
+      operationId: getExample
+      tags:
+        - Example
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, world!"

@@ -1,11 +1,18 @@
-extends: ["spectral:oas"]
-
+extends: spectral:oas
 rules:
-  info-contact:
-    description: "The `info` object must include a `contact` field."
-    message: "Missing `contact` in `info` object."
+  operation-operationId-camelCase:
+    description: "operationId must be in camelCase format."
     severity: error
-    given: "$.info"
+    given: "$.paths[*][*].operationId"
     then:
-      field: "contact"
+      function: pattern
+      functionOptions:
+        match: "^[a-z]+([A-Z][a-z0-9]*)*$"
+
+  operation-summary-required:
+    description: "Every operation must have a summary."
+    severity: warn
+    given: "$.paths[*][*]"
+    then:
+      field: summary
       function: truthy

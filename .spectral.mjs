@@ -1,2 +1,5 @@
-import ruleset from "./.spectral.yaml";
-export default { extends: ruleset };
+import yamlRuleset from "./.spectral.yaml";
+
+export default {
+  extends: yamlRuleset,
+};
