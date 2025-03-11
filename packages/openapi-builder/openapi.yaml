@@ -6,31 +6,25 @@ info:
   contact:
     name: API Support
     email: support@example.com
-    url: dummy@gmail.com
+    url: https://example.com
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
 
 tags:
-  - name: Example
-    description: Example endpoints
+  - name: Orders
+    description: Operations related to orders
+  - name: Users
+    description: Operations related to users
 
 paths:
-  /example:
+  /users:
     get:
-      summary: Get an example response
-      description: test
-      operationId: getExample
+      operationId: getUsers  # ✅ Corrected to camelCase
+      summary: Retrieve a list of users
+      description: Fetches a list of users from the system.
       tags:
-        - Example
+        - Users
       responses:
         "200":
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: "Hello, world!"
+          description: Successful 
