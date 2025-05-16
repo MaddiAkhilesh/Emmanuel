@@ -1,4 +1,6 @@
 openapi: 3.0.0
+x-stoplight:
+  id: 00702be226f19
 info:
   title: Sample API
   version: 1.0.0
@@ -6,11 +8,10 @@ info:
   contact:
     name: API Support
     email: support@example.com
-    url: https://example.com
+    url: 'https://example.com'
   license:
     name: MIT
-    url: https://opensource.org/licenses/MIT
-
+    url: 'https://opensource.org/licenses/MIT'
 tags:
   - name: Orders
     description: Operations related to orders
@@ -20,11 +21,13 @@ tags:
 paths:
   /users:
     get:
-      operationId: getUsers  # ✅ Corrected to camelCase
+      operationId: getUsers
       summary: Retrieve a list of users
       description: Fetches a list of users from the system.
       tags:
         - Users
       responses:
-        "200":
-          description: Successful 
+        '200':
+          description: Successful
+      x-stoplight:
+        id: y9v4hrgek3z
