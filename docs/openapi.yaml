@@ -4,7 +4,7 @@ x-stoplight:
 info:
   title: Sample API
   version: 1.0.0
-  description: This is a sample API specification.
+  description: Update OpenAPI spec with Orders and Users endpoints
   contact:
     name: API Support
     email: support@example.com
@@ -31,3 +31,30 @@ paths:
           description: Successful
       x-stoplight:
         id: y9v4hrgek3z
+
+  /orders:
+    post:
+      operationId: createOrder
+      summary: Create a new order
+      description: Creates a new order and returns the order ID.
+      tags:
+        - Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: string
+                quantity:
+                  type: integer
+              required:
+                - productId
+                - quantity
+      responses:
+        '201':
+          description: Order created successfully
+      x-stoplight:
+        id: abcd1234xyz
