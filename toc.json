@@ -1,0 +1,9 @@
+{
+  "name": "Dev Docs",
+  "items": [
+    {
+      "name": "Overview",
+      "page": "docs/dev-doc.md"
+    }
+  ]
+}
