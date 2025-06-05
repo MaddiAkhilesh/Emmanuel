@@ -1,0 +1,9 @@
+{
+  "name": "Master Docs",
+  "items": [
+    {
+      "name": "Overview",
+      "page": "docs/master-doc.md"
+    }
+  ]
+}
