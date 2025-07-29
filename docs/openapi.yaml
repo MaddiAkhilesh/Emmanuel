@@ -32,7 +32,7 @@ paths:
       x-stoplight:
         id: y9v4hrgek3z
 
-  /orders:
+  /orders/:
     post:
       operationId: createOrder
       summary: Create a new order
