@@ -4,7 +4,7 @@ x-stoplight:
 info:
   title: Sample API
   version: 1.0.0
-  description: Update OpenAPI spec with Orders and Users endpoints
+  description: Update OpenAPI spec with Orders and Users endpoints.
   contact:
     name: API Support
     email: support@example.com
@@ -22,7 +22,7 @@ paths:
   /users:
     get:
       operationId: getUsers
-      summary: Retrieve a list of users
+      summary: Retrieve a list of users TEST
       description: Fetches a list of users from the system.
       tags:
         - Users
@@ -32,7 +32,7 @@ paths:
       x-stoplight:
         id: y9v4hrgek3z
 
-  /orders:
+  /orders/:
     post:
       operationId: createOrder
       summary: Create a new order
