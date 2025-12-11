@@ -22,7 +22,7 @@ paths:
   /users:
     get:
       operationId: getUsers
-      summary: Retrieve a list of users
+      summary: Retrieve a list of users TEST
       description: Fetches a list of users from the system.
       tags:
         - Users
